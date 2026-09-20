@@ -224,7 +224,7 @@ export default function ReportResultPage() {
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
-    const fileName = `skb-${activeReportObj.slug}-${fromDate || 'all'}-to-${toDate || 'all'}.csv`;
+    const fileName = `report-${activeReportObj.slug}-${fromDate || 'all'}-to-${toDate || 'all'}.csv`;
     link.setAttribute("href", url);
     link.setAttribute("download", fileName);
     document.body.appendChild(link);

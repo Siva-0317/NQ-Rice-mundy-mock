@@ -59,7 +59,7 @@ export default function Login() {
       <div className="bg-white p-8 rounded-2xl shadow-sm border border-border w-full max-w-md relative z-10 text-black">
         <div className="text-center mb-8">
           <h1 className="font-display text-3xl font-bold text-black mb-1">
-            SKB Rice <span className="text-gold">·</span> Mundy
+            Inventory <span className="text-gold">·</span> Pro
           </h1>
           <p className="text-textMuted text-sm">Please sign in to your account</p>
         </div>

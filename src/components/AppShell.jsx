@@ -190,7 +190,7 @@ export default function AppShell({ children, title }) {
         <div className="pt-4 pb-2 px-4 relative flex flex-col items-center justify-center">
           <img 
             src="/logo.jpeg" 
-            alt="SKB Rice MUNDY Logo" 
+            alt="Inventory Pro Logo" 
             className="h-[60px] w-auto max-w-[80%] mx-auto object-contain rounded"
             onError={(e) => {
               e.currentTarget.style.display = 'none';
@@ -198,7 +198,7 @@ export default function AppShell({ children, title }) {
             }}
           />
           <div className="hidden items-center gap-2 font-display text-lg font-bold text-cream mx-auto">
-            SKB MUNDY
+            Inventory Pro
           </div>
           <button 
             className="text-cream/70 hover:text-cream md:hidden absolute top-4 right-4 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
@@ -270,14 +270,14 @@ export default function AppShell({ children, title }) {
             <div className="md:hidden flex items-center mr-1 shrink-0">
               <img 
                 src="/logo.jpeg" 
-                alt="SKB Rice MUNDY Logo" 
+                alt="Inventory Pro Logo" 
                 className="h-[36px] w-auto object-contain rounded"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                   e.currentTarget.nextElementSibling.style.display = 'inline';
                 }}
               />
-              <span className="hidden font-display font-bold text-textDark text-base">SKB</span>
+              <span className="hidden font-display font-bold text-textDark text-base">INV</span>
             </div>
             <h1 className="font-display text-[18px] sm:text-[22px] font-semibold text-textDark truncate max-w-[110px] sm:max-w-none">
               {title}

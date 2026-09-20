@@ -3,6 +3,7 @@
     "rules": "firestore.rules"
   },
   "hosting": {
+    "site": "nq-rice-mundy-mock",
     "public": "dist",
     "ignore": [
       "firebase.json",

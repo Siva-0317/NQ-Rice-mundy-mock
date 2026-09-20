@@ -7,12 +7,12 @@ export const getNextBillNo = async () => {
   const counterRef = doc(db, "counters", "billCounters");
   const d = await getDoc(counterRef);
   const nextSaleBill = d.exists() ? (d.data().nextSaleBill || 1) : 1;
-  return 'SKB-2026-' + String(nextSaleBill).padStart(4, '0');
+  return 'INV-2026-' + String(nextSaleBill).padStart(4, '0');
 };
 
 // Bill lookup for the global search box. Uses a prefix range on billNo so it stays a
 // single indexed query rather than pulling the whole sales collection into the shell.
-// Bill numbers are stored upper-case ("SKB-2026-0021"), so the query is upper-cased to
+// Bill numbers are stored upper-case ("INV-2026-0021"), so the query is upper-cased to
 // keep the search case-insensitive from the user's point of view.
 export const searchSalesByBillNo = async (term, max = 5) => {
   const q0 = String(term || '').trim().toUpperCase();
@@ -98,7 +98,7 @@ export const createSale = async ({ customerId, customerName, date, advance, rema
     // 1. READS
     const counterDoc = await transaction.get(counterRef);
     const nextSaleBill = counterDoc.exists() ? (counterDoc.data().nextSaleBill || 1) : 1;
-    const billNo = 'SKB-2026-' + String(nextSaleBill).padStart(4, '0');
+    const billNo = 'INV-2026-' + String(nextSaleBill).padStart(4, '0');
 
     const customerDoc = await transaction.get(customerRef);
     if (!customerDoc.exists()) {

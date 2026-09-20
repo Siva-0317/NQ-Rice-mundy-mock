@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-bg text-textDark;
+  }
+  h1, h2, h3 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .thin-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #C8912A66 transparent;
+  }
+  .thin-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  .thin-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .thin-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #C8912A66;
+    border-radius: 9999px;
+  }
+}
